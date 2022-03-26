@@ -8,6 +8,12 @@ log_type information
 persistence true
 persistence_location /data/
 
+{{ if .anonymous }}
+allow_anonymous true
+{{ else }}
+allow_anonymous false
+{{ end }}
+
 # Authentication plugin
 #auth_plugin /usr/share/mosquitto/auth-plug.so
 #auth_opt_backends files,http

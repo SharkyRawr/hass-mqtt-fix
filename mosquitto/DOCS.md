@@ -54,6 +54,14 @@ logins:
     password: passwd
 ```
 
+### Option: `anonymous`
+
+Allow anonymous connections without using a password.
+
+```yaml
+anonymous: true
+```
+
 #### Option: `customize.active`
 
 If set to `true` additional configuration files will be read, see the next option.

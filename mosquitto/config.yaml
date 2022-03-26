@@ -22,6 +22,7 @@ options:
     folder: mosquitto
   keyfile: privkey.pem
   logins: []
+  anonymous: true
   require_certificate: false
 ports:
   1883/tcp: 1883
@@ -43,6 +44,7 @@ schema:
   logins:
     - password: password
       username: str
+  anonymous: bool
   require_certificate: bool
 services:
   - mqtt:provide
