@@ -1,7 +1,7 @@
-version: 6.0.1
+version: 6.0.1a
 slug: mosquitto-fix
 name: Mosquitto broker (fix)
-description: An Open Source MQTT broker
+description: An Open Source MQTT broker (fixed)
 url: https://github.com/SharkyRawr/hass-mqtt-fix/tree/main/mosquitto
 arch:
   - armhf

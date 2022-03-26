@@ -30,30 +30,6 @@ else
   service_password=$(bashio::jq "${SYSTEM_USER}" ".addons.password")
 fi
 
-# Set up discovery user
-password=$(np -p "${discovery_password}")
-echo "homeassistant:${password}" >> "${PW}"
-echo "user homeassistant" >> "${ACL}"
-
-# Set up service user
-password=$(np -p "${service_password}")
-echo "addons:${password}" >> "${PW}"
-echo "user addons" >> "${ACL}"
-
-# Set username and password for the broker
-for login in $(bashio::config 'logins|keys'); do
-  bashio::config.require.username "logins[${login}].username"
-  bashio::config.require.password "logins[${login}].password"
-
-  username=$(bashio::config "logins[${login}].username")
-  password=$(bashio::config "logins[${login}].password")
-
-  bashio::log.info "Setting up user ${username}"
-  password=$(np -p "${password}")
-  echo "${username}:${password}" >> "${PW}"
-  echo "user ${username}" >> "${ACL}"
-done
-
 keyfile="/ssl/$(bashio::config 'keyfile')"
 certfile="/ssl/$(bashio::config 'certfile')"
 cafile="/ssl/$(bashio::config 'cafile')"
