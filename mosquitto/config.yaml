@@ -9,6 +9,7 @@ arch:
   - aarch64
   - amd64
   - i386
+image: sophiefox/hass-mqtt-fix-{arch}
 auth_api: true
 discovery:
   - mqtt
