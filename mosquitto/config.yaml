@@ -1,4 +1,4 @@
-version: 6.0.1e
+version: 6.0.2
 slug: mosquitto-fix
 name: Mosquitto broker (fix)
 description: An Open Source MQTT broker (fixed)
@@ -10,6 +10,7 @@ arch:
   - amd64
   - i386
 image: sophiefox/hass-mqtt-fix-{arch}
+codenotary: cas@sophie.lgbt
 init: false
 auth_api: true
 discovery:
