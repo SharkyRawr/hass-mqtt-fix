@@ -2,17 +2,13 @@
 # ==============================================================================
 # Configures mosquitto
 # ==============================================================================
-readonly ACL="/etc/mosquitto/acl"
-readonly PW="/etc/mosquitto/pw"
 readonly SYSTEM_USER="/data/system_user.json"
 declare cafile
 declare certfile
 declare discovery_password
 declare keyfile
-declare password
 declare service_password
 declare ssl
-declare username
 
 # Read or create system account data
 if ! bashio::fs.file_exists "${SYSTEM_USER}"; then
