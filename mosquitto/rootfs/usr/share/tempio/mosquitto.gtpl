@@ -21,8 +21,8 @@ include_dir /share/{{ .customize_folder }}
 listener 1883
 protocol mqtt
 
-listener 1884
-protocol websockets
+#listener 1884
+#protocol websockets
 
 {{ if .ssl }}
 
@@ -38,15 +38,15 @@ certfile {{ .certfile }}
 keyfile {{ .keyfile }}
 require_certificate {{ .require_certificate }}
 
-listener 8884
-protocol websockets
-{{ if .cafile }}
-cafile {{ .cafile }}
-{{ else }}
-cafile {{ .certfile }}
-{{ end }}
-certfile {{ .certfile }}
-keyfile {{ .keyfile }}
-require_certificate {{ .require_certificate }}
+#listener 8884
+#protocol websockets
+#{{ if .cafile }}
+#cafile {{ .cafile }}
+#{{ else }}
+#cafile {{ .certfile }}
+#{{ end }}
+#certfile {{ .certfile }}
+#keyfile {{ .keyfile }}
+#require_certificate {{ .require_certificate }}
 
 {{ end }}
