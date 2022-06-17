@@ -1,4 +1,4 @@
-version: 6.0.2a
+version: 6.0.2b
 slug: mosquitto-fix
 name: Mosquitto broker (fix)
 description: An Open Source MQTT broker (fixed)
